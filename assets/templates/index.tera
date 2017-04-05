@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/assets/resources/favicon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
+    <link rel="stylesheet" href="/assets/styles/theme.css">
+    <title>Heimdallr</title>
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <div id="nav-block">
+                <a href="/">
+                    <p class="accented">SAM</p>
+                </a>
+            </div>
+            <div class="user-block">
+                <a href="/user">
+                    <p class="accented">Login</p>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <div id="hero">
+        <p class="title">SAM</p>
+        <p id="subtitle">Student Activity Manager</p>
+    </div>
+</body>
+
+</html>

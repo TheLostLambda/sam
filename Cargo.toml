@@ -1,0 +1,9 @@
+[package]
+name = "sam"
+version = "0.1.0"
+authors = ["Brooks J Rady <b.j.rady@gmail.com>"]
+
+[dependencies]
+rocket = "0.2.4"
+rocket_codegen = "0.2.4"
+rocket_contrib = { version = "*", features = ["tera_templates"] }
