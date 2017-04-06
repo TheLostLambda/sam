@@ -15,6 +15,7 @@
         <nav id="navbar">
             <div id="nav-block">
                 <a href="/">
+                    <img src="/assets/resources/favicon.png" alt="Logo">
                     <p class="accented">SAM</p>
                 </a>
             </div>
