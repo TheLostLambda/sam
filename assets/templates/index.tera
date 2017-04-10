@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="/assets/resources/favicon.png">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
     <link rel="stylesheet" href="/assets/styles/theme.css">
-    <title>Heimdallr</title>
+    <title>SAM</title>
 </head>
 
 <body>
@@ -18,18 +18,33 @@
                     <img src="/assets/resources/favicon.png" alt="Logo">
                     <p class="accented">SAM</p>
                 </a>
+                <div class="v-divider"></div>
+                <a href="/">
+                    <p>MINER CUP</p>
+                </a>
+                <div class="v-divider"></div>
+                <a href="/">
+                    <p>CLUBS</p>
+                </a>
+                <div class="v-divider"></div>
+                <a href="/">
+                    <p>POLLS</p>
+                </a>
             </div>
-            <div class="user-block">
+            <div id="user-block">
                 <a href="/user">
-                    <p class="accented">Login</p>
+                    <p>LOGIN</p>
                 </a>
             </div>
         </nav>
     </header>
-    <div id="hero">
-        <p class="title">SAM</p>
-        <p id="subtitle">Student Activity Manager</p>
+        <div id="content">
+        </div>
+  <footer>
+    <div id="footer">
+
     </div>
+  </footer>
 </body>
 
 </html>

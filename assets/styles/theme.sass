@@ -1,9 +1,50 @@
-$std-font-stack: 'Source Sans Pro', sans-serif
-$base-color: hsl(360, 0%, 30%)
-$complement-color: hsl(360, 0%, 85%)
-$accent-color: hsl(40, 95%, 60%)
-$shadow-color: hsla(0, 0%, 0%, .3)
+$std-font-stack: 'Josefin Sans', sans-serif
+$base-color: hsl(0, 0%, 21%)
+$complement-color: hsl(0, 0%, 54%)
+$accent-color: hsl(60, 100%, 50%)
+$shadow-color: hsla(0, 0%, 0%, .5)
 
 body
   background-color: $base-color
-  color: $accent-color
+  font-family: $std-font-stack
+  font-size: 2em
+  margin: 0
+
+  #content
+    padding-top: 2.2em
+
+  #navbar
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    background-color: $complement-color
+    box-shadow: 0 4px 8px 0 $shadow-color
+    .accented
+      color: $accent-color
+
+    *
+      display: inline-block
+      text-decoration: none
+      color: $base-color
+      vertical-align: middle
+      margin: 0
+      padding: .1em
+
+      &:hover
+        color: $accent-color
+
+    img
+      image-rendering: pixelated
+      image-rendering: -moz-crisp-edges
+      width: 2em
+
+    .v-divider
+      background-color: $accent-color
+      height: 2em
+      padding: 0
+      width: 2px
+
+    #user-block
+      float: right
+      line-height: 2.2em
