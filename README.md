@@ -5,5 +5,8 @@ SAM is a multipurpose web application for managing student activities such as cl
 ## Todo
 
   * Write custom 404 error handler
-  * Finish homepage
+  * Add Content to homepage
+  * Create Miner Cup Page, Style it, Finish it
+  * Create Logic for scheduling program.
+  * Create database
   * Finish site theme
