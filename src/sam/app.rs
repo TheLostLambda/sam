@@ -18,7 +18,7 @@ pub struct Input {
 }
 
 trait ToForm {
-    fn to_form(Vec<&str>) -> Form;
+    fn to_form() -> Form;
 }
 
 #[derive(Queryable, Insertable)]
@@ -36,12 +36,11 @@ pub struct Student {
     secret: Option<String>,
 }
 
-#[derive(Insertable, FromForm, ToForm)]
+#[derive(Insertable, FromForm)]
 #[table_name="students"]
 pub struct NewStudent {
     name: String,
     number: i32,
     year: i32,
-    #[combo_box="peaks"]
     peak: String,
 }
