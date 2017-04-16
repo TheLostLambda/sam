@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/assets/resources/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/styles/theme.css">
+    <title>SAM</title>
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <div id="nav-block">
+                <a href="/">
+                    <img src="/assets/resources/favicon.png" alt="Logo">
+                    <p class="accented">SAM</p>
+                </a>
+                <div class="v-divider"></div>
+                <a href="/">
+                    <p>MINER CUP</p>
+                </a>
+                <div class="v-divider"></div>
+                <a href="/">
+                    <p>CLUBS</p>
+                </a>
+                <div class="v-divider"></div>
+                <a href="/">
+                    <p>POLLS</p>
+                </a>
+            </div>
+            <div id="user-block">
+                <a href="/user">
+                    <p>LOGIN</p>
+                </a>
+            </div>
+        </nav>
+    </header>
+        <div id="content">
+          <form action="/login" method="post" accept-charset="utf-8">
+              Name:<input type="text" name="name">
+              Number:<input type="number" name="number">
+              Year:<input type="number" name="year">
+              Peak:<input type="text" name="peak">
+              <input type="submit" value="Login">
+</form>
+        </div>
+  <footer>
+    <div id="footer">
+
+    </div>
+  </footer>
+</body>
+
+</html>

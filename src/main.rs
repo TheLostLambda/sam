@@ -1,26 +1,19 @@
 #![feature(plugin)]
 #![plugin(rocket_codegen)]
+#![feature(custom_derive)] //Grrr... Rocket, please fix this!
+#![feature(custom_attribute)]
 
+extern crate dotenv;
 extern crate rocket;
 extern crate rocket_contrib;
+#[macro_use] extern crate diesel;
+#[macro_use] extern crate serde_derive;
+#[macro_use] extern crate diesel_codegen;
+#[macro_use] extern crate sam_meta;
 
-use std::collections::HashMap;
-use rocket_contrib::Template;
-use std::path::PathBuf;
-
-use rocket::response::NamedFile;
-
-#[get("/")]
-fn index() -> Template {
-    let context: HashMap<usize,usize> = HashMap::new();
-    Template::render("index", &context)
-}
-
-#[get("/<file..>")]
-fn files(file: PathBuf) -> Option<NamedFile> {
-    NamedFile::open(file).ok()
-}
+pub mod sam;
+use sam::*;
 
 fn main() {
-    rocket::ignite().mount("/", routes![index, files]).launch();
+    rocket::ignite().manage(SAM{}).mount("/", routes![index, files]).launch();
 }
