@@ -11,7 +11,7 @@ extern crate rocket_contrib;
 
 pub mod sam;
 use sam::*;
-
+//code
 fn main() {
-    rocket::ignite().manage(SAM{}).mount("/", routes![index, files]).launch();
+    rocket::ignite().manage(SAM{}).mount("/", routes![index, files, add_student]).launch();
 }

@@ -39,12 +39,21 @@
         </nav>
     </header>
         <div id="content">
-          <form action="/login" method="post" accept-charset="utf-8">
-              Name:<input type="text" name="name">
-              Number:<input type="number" name="number">
-              Year:<input type="number" name="year">
-              Peak:<input type="text" name="peak">
-              <input type="submit" value="Login">
+          <p>Insert scrub help text here. The user is going to need it...</p>
+          <p>Also, do extensive verification of the fields like name.</p>
+          <form action="{{ post }}" method="post" accept-charset="utf-8">
+            {% for input in fields %}
+              {% if input.input_type == "select" %}
+              {{ input.display_text }}<select name="{{ input.parse_field }}">
+                {% for option in input.options %}
+                  <option value="{{ option }}">{{ option }}</option>
+                {% endfor %}
+              </select>
+              {% else %}
+              {{ input.display_text }}<input type="{{ input.input_type }}" name="{{ input.parse_field }}">
+              {% endif %}
+            {% endfor %}
+              <input type="submit" value="{{ sub_text }}">
 </form>
         </div>
   <footer>

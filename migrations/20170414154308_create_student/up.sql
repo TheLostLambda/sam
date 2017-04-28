@@ -1,8 +1,8 @@
 -- Your SQL goes here
 CREATE TABLE students (
- name text NOT NULL UNIQUE,
- number integer PRIMARY KEY,
- year integer NOT NULL,
- peak text NOT NULL,
- secret text DEFAULT NULL
+ name VARCHAR NOT NULL UNIQUE,
+ number INTEGER NOT NULL PRIMARY KEY,
+ year INTEGER NOT NULL,
+ peak VARCHAR NOT NULL,
+ secret VARCHAR DEFAULT NULL
 );
