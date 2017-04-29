@@ -16,6 +16,16 @@ pub struct Form {
     sub_text: String
 }
 
+impl Form {
+    pub fn new(p: &str, f: Vec<Input>, s: &str) -> Form {
+        Form {
+            post: p.to_string(),
+            fields: f,
+            sub_text: s.to_string()
+        }
+    }
+}
+
 // Potentially replace this struct with a tuple and use .into instead of String::from()
 #[derive(Serialize)]
 pub struct Input {
@@ -45,7 +55,7 @@ pub struct Peak {
     name: String,
 }
 
-#[derive(Queryable, Insertable)]
+#[derive(Queryable, Insertable, FromForm)]
 #[table_name="students"]
 pub struct Student {
     name: String,
@@ -55,15 +65,7 @@ pub struct Student {
     secret: Option<String>,
 }
 
-#[derive(FromForm)]
-pub struct NewStudent {
-    name: String,
-    number: i32,
-    year: i32,
-    peak: String,
-}
-
-impl ToForm for NewStudent {
+impl ToForm for Student {
     fn to_form() -> Form {
         use diesel::prelude::*;
         use peaks::dsl::*;
@@ -80,10 +82,6 @@ impl ToForm for NewStudent {
         form.push(Input::new("Student Number: ", "number", "number", Vec::new()));
         form.push(Input::new("Graduating Class: ", "number", "year", Vec::new()));
         form.push(Input::new("Peak: ", "select", "peak", peak_names));
-        Form {
-            post: "/crud/add/student".to_string(),
-            fields: form,
-            sub_text: "Submit".to_string()
-        }
+        Form::new("/crud/add/student", form, "Submit")
     }
 }

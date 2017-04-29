@@ -13,5 +13,5 @@ pub mod sam;
 use sam::*;
 //code
 fn main() {
-    rocket::ignite().manage(SAM{}).mount("/", routes![index, files, add_student]).launch();
+    rocket::ignite().manage(SAM{}).mount("/", routes![index, files, add_student, add_student_post]).launch();
 }
