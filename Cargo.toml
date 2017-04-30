@@ -4,12 +4,13 @@ version = "0.1.0"
 authors = ["Brooks J Rady <b.j.rady@gmail.com>", "Cameren K Castillo <cameren900910@prospectridgeacademy.org>"]
 
 [dependencies]
-rocket = "0.2.4"
-rocket_codegen = "0.2.4"
+rocket = "*"
+rocket_codegen = "*"
 rocket_contrib = { version = "*", features = ["tera_templates"] }
-diesel = { version = "0.11.0", features = ["sqlite"] }
-diesel_codegen = { version = "0.11.0", features = ["sqlite"] }
-bcrypt = "0.1"
-dotenv = "0.10.0"
+diesel = { version = "*", features = ["sqlite"] }
+diesel_codegen = { version = "*", features = ["sqlite"] }
+bcrypt = "*"
+dotenv = "*"
 serde = "0.9"
 serde_derive = "0.9"
+quick-csv = "*"

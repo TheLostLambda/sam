@@ -58,11 +58,11 @@ pub struct Peak {
 #[derive(Queryable, Insertable, FromForm)]
 #[table_name="students"]
 pub struct Student {
-    name: String,
-    number: i32,
-    year: i32,
-    peak: String,
-    secret: Option<String>,
+    pub name: String,
+    pub number: i32,
+    pub year: i32,
+    pub peak: String,
+    pub secret: Option<String>,
 }
 
 impl ToForm for Student {
