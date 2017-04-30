@@ -28,8 +28,8 @@ fn add_student_post(new_sdnt: Form<Student>) -> Redirect {
     let sdnt = new_sdnt.get();
 
     insert(sdnt).into(students::table)
-                 .execute(&conn)
-                 .expect("Error adding new student");
+                .execute(&conn)
+                .expect("Error adding new student");
     Redirect::to("/crud/add/student")
 }
 
